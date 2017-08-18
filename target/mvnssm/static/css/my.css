@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 61px;
+}
+#header{
+    padding-top: 15px;
+    background-color: #32c5d2;
+    text-align: center;
+}
+#header h1{
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 2px;
+}
+#maincontent{
+    padding-top: 20px;
+}
+#maincontent form{
+    margin:80px auto;
+    width: 500px;
+    border: 2px solid #32c5d2;
+    border-radius: 3px;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #32c5d2;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left:0;
+}
+#footer p{
+    margin: 0;
+}
+#nav{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 0;
+}
+#nav ul{
+    overflow: hidden;
+    list-style: none;
+    padding-left: 0;
+    color: #fff;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+#nav  ul li{
+    float: left;
+    height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 40px;
+
+}
+li label{
+    color: #fff;
+}
+
+.description{
+    color: #32c5d2;
+    margin-top: 30px;
+    text-align: center;
+}
+.description h3{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+.upload{
+    margin: 35px 0;
+    text-align:center;
+}
+.upload label{
+    vertical-align: middle;
+    border-radius: 3px;
+    text-align: center;
+
+    line-height: 32px;
+    color:#fff;
+    display: inline-block;
+    background-color: rgb(33,150,243);
+    height: 32px;
+    width: 140px;
+
+}
+.upload input{
+    display: none;
+
+}
+.submit{
+    text-align:center;
+    margin-bottom: 50px;
+
+}
+.submit>input{
+
+    border:none ;
+    border-radius: 3px;
+    color:#fff;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(33,150,243);
+}
+.submit>input:hover{
+    opacity: 0.6;
+}
+
+.upload span{
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #32c5d2;
+    width: 140px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 1px;
+}

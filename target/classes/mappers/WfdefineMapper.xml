@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.megalink.study.mappers.WfdefineMapper">
+    <insert id="insertWfdefine">
+        <selectKey keyProperty="ID" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into wfdefine (
+        NAME,
+        VERSION,
+        CREATED,
+        XMLFILE,
+        TITLE,
+        MODIFIED,
+        STATUS,
+        ISLATEST,
+        DOMAIN_ID
+        )VALUES (
+        #{NAME},
+        #{VERSION},
+        #{CREATED},
+        #{XMLFILE},
+        #{TITLE},
+        #{MODIFIED},
+        #{STATUS},
+        #{ISLATEST},
+        #{DOMAIN_ID}
+        )
+    </insert>
+</mapper>

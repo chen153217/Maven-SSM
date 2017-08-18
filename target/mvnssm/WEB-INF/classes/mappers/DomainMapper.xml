@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.megalink.study.mappers.DomainMapper">
+<!--    <select id="getName" resultType="java.lang.String">
+        SELECT NAME from domain
+    </select>-->
+    <select id="getDomainKey" resultType="java.lang.String">
+        SELECT `KEY` from domain
+    </select>
+    <select id="getDomainName" resultType="java.lang.String">
+        SELECT NAME from domain
+    </select>
+    <insert id="insertDomain" >
+        <selectKey keyProperty="DOMAIN_ID" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT into domain (
+        NAME,
+        MODIFIED,
+        CREATED,
+        CREATORID,
+        DESCRIPTION,
+        TYPE,
+        ISAVAILABLE,
+        `KEY`) values(
+        #{NAME},
+        #{MODIFIED},
+        #{CREATED},
+        #{CREATORID},
+        #{DESCRIPTION},
+        #{TYPE},
+        #{ISAVAILABLE},
+        #{KEY});
+    </insert>
+
+</mapper>

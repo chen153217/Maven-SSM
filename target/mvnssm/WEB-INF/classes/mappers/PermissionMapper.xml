@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.megalink.study.mappers.PermissionMapper">
+    <insert id="insertPermission">
+      <!--  <selectKey keyProperty="DOMAIN_ID" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>-->
+        INSERT INTO permission(
+        DOMAIN_ID,
+        SOFTTYPE,
+        STATUS,
+        READ_PERMISSION,
+        WRITE_PERMISSION,
+        DELETE_PERMISSION,
+        ADD_PERMISSION,
+        ALL_PERMISSION,
+        PRINCIPALID,
+        CONTAINER_ID,
+        MAG_PERMISSION,
+        USERID,
+        TYPE,
+        DOWNLOAD_PERMISSION,
+        PRINT_PERMISSION,
+        MODIFIED,
+        CREATED,
+        MODIFIERID,
+        CREATERID
+        ) VALUES (
+        #{DOMAIN_ID},
+        #{SOFTTYPE},
+        #{STATUS},
+        #{READ_PERMISSION},
+        #{WRITE_PERMISSION},
+        #{DELETE_PERMISSION},
+        #{ADD_PERMISSION},
+        #{ALL_PERMISSION},
+        #{PRINCIPALID},
+        #{CONTAINER_ID},
+        #{MAG_PERMISSION},
+        #{USERID},
+        #{TYPE},
+        #{DOWNLOAD_PERMISSION},
+        #{PRINT_PERMISSION},
+        #{MODIFIED},
+        #{CREATED},
+        #{MODIFIERID},
+        #{CREATERID}
+        )
+
+    </insert>
+</mapper>

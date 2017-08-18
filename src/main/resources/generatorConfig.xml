@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context defaultModelType="conditional" id="saleWrite" targetRuntime="MyBatis3">
+        <property name="renamePlugin.search" value=""/>
+        <property name="renamePlugin.replace" value=""/>
+        <property name="renamePlugin.prefix" value="MBG"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="com.megalink.study.utils.mybatis.MySQLRowBoundsPlugin"/>
+        <plugin type="com.megalink.study.utils.mybatis.RenamePlugin"/>
+        <plugin type="com.megalink.study.utils.mybatis.SeparateUserCodePlugin"/>
+        <!-- <plugin type="com.dream.utils.mybatis.plugin.ParentExamplesPlugin">
+             <property name="parentExample" value="BaseExample"/>
+         </plugin>-->
+        <commentGenerator type="com.megalink.study.utils.mybatis.CommentGenerator">
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <jdbcConnection connectionURL="jdbc:mysql://localhost:3306/chen"
+                        driverClass="com.mysql.jdbc.Driver"
+                        password="123456"
+                        userId="root"/>
+        <javaTypeResolver type="com.megalink.study.utils.mybatis.CustomJavaTypeResolver">
+            <property name="customTypeMap" value="TINYINT:java.lang.Integer,LONGVARCHAR:java.lang.String,TEXT:java.lang.String"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.megalink.study.model.nochange" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+            <property name="renamePlugin.prefix" value=""/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mappers.nochange" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+            <property name="separateUserCodePlugin.targetPackage" value="mappers"/>
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="com.megalink.study.mappers.nochange" targetProject="src/main/java"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+            <property name="exampleMethodVisibility" value="public"/>
+            <property name="methodNameCalculator" value="default"/>
+            <property name="separateUserCodePlugin.targetPackage" value="com.megalink.study.mappers"/>
+            <property name="separateUserCodePlugin.search" value="\AMBG"/>
+            <property name="separateUserCodePlugin.replace" value=""/>
+        </javaClientGenerator>
+        <table schema="chen" tableName="domain" domainObjectName="Domain">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="DOMAIN_ID" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="lcmgroup" domainObjectName="Group">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="lcmuser" domainObjectName="Lcmuser">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="container" domainObjectName="Container">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="container_id" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="memberlink" domainObjectName="MemberLink">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="wfdefine" domainObjectName="Wfdefine">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="permission" domainObjectName="Permission">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="PERMISSION_ID" identity="true" sqlStatement="MySql"/>
+        </table>
+        <table schema="chen" tableName="folder" domainObjectName="Folder">
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="FOLDER_ID" identity="true" sqlStatement="MySql"/>
+        </table>
+    </context>
+</generatorConfiguration>
